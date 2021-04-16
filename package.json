@@ -1,0 +1,26 @@
+{
+  "name": "Marvel_Rater",
+  "version": "1.0.0",
+  "description": "A Small CRUD app to rate Marvel movies that I watch with my wife",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jon-D-Smith/Marvel_Rater.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jon-D-Smith/Marvel_Rater/issues"
+  },
+  "homepage": "https://github.com/Jon-D-Smith/Marvel_Rater#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.12.4"
+  }
+}
