@@ -36,6 +36,8 @@ app.post('/movies', async (req, res) => {
     res.redirect('/movies')
 })
 
+//Edit Movie Rating
+
 
 
 app.listen(PORT, () => {
