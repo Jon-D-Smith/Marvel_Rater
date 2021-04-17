@@ -5,47 +5,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/forms.css">
     <title>Edit Movie Rating</title>
 </head>
 
 <body>
-    <h1>
-        <%= movie.title %>
-    </h1>
-    <form action="/movies/<%=movie._id%>?_method=PUT" method="POST">
-        <div>
-            <label for="title">Title:</label>
-            <input type="text" id="title" name="title" value="<%=movie.title%>">
-        </div>
-        <div>
-            <label for="image">Image URL:</label>
-            <input type="text" id="image" name="image" value="<%=movie.image%>">
-        </div>
-        <div>
-            <label for="comedy">Comedy Score:</label>
-            <input type="number" id="comedy" name="comedy" min="0" max="2" step="0.1" value="<%=movie.comedy%>">
-        </div>
-        <div>
-            <label for="immersion">Immersion Score:</label>
-            <input type="number" id="immersion" name="immersion" min="0" max="2" step="0.1"
-                value="<%=movie.immersion%>">
-        </div>
-        <div>
-            <label for="eggs">Easter Egg Score:</label>
-            <input type="number" id="eggs" name="eggs" min="0" max="2" step="0.1" value="<%=movie.eggs%>">
-        </div>
-        <div>
-            <label for="emotion">Emotion Score:</label>
-            <input type="number" id="emotion" name="emotion" min="0" max="2" step="0.1" value="<%=movie.emotion%>">
-        </div>
-        <div>
-            <label for="development">Character Development Score:</label>
-            <input type="number" id="development" name="development" min="0" max="2" step="0.1"
-                value="<%=movie.development%>">
-        </div>
-        <button>Edit Rating</button>
-        <a href="/movies">Cancel</a>
-    </form>
+    <div class="container">
+        <h1>
+            <%= movie.title %>
+        </h1>
+        <form action="/movies/<%=movie._id%>?_method=PUT" method="POST">
+            <div>
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" value="<%=movie.title%>">
+            </div>
+            <div>
+                <label for="image">Image URL:</label>
+                <input type="text" id="image" name="image" value="<%=movie.image%>">
+            </div>
+            <div>
+                <label for="comedy">Comedy Score:</label>
+                <input type="number" id="comedy" name="comedy" min="0" max="2" step="0.1" value="<%=movie.comedy%>">
+            </div>
+            <div>
+                <label for="immersion">Immersion Score:</label>
+                <input type="number" id="immersion" name="immersion" min="0" max="2" step="0.1"
+                    value="<%=movie.immersion%>">
+            </div>
+            <div>
+                <label for="eggs">Easter Egg Score:</label>
+                <input type="number" id="eggs" name="eggs" min="0" max="2" step="0.1" value="<%=movie.eggs%>">
+            </div>
+            <div>
+                <label for="emotion">Emotion Score:</label>
+                <input type="number" id="emotion" name="emotion" min="0" max="2" step="0.1" value="<%=movie.emotion%>">
+            </div>
+            <div>
+                <label for="development">Character Development Score:</label>
+                <input type="number" id="development" name="development" min="0" max="2" step="0.1"
+                    value="<%=movie.development%>">
+            </div>
+            <button>Edit Rating</button>
+            <span>
+                <a href="/movies">
+
+
+                    Cancel</a></span>
+        </form>
+    </div>
 </body>
 
 </html>
