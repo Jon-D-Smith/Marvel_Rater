@@ -22,11 +22,15 @@
 }
 .Picture { grid-area: Picture; }
 .title { grid-area: title; }
-.score { grid-area: score; }
+.score { grid-area: score; 
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr;
+}
 
 
 
 img{
     width: 150px;
-    height: 250px;
+    height: 275px;
 }
