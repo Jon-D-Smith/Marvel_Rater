@@ -1,0 +1,32 @@
+.container{
+    width: 90%;
+        
+}
+
+.movie-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "Picture title title title"
+        "Picture title title title"
+        "Picture score score score";
+
+        width: 50%;
+        height: 300px;
+        margin: 50px auto;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 20px;
+}
+.Picture { grid-area: Picture; }
+.title { grid-area: title; }
+.score { grid-area: score; }
+
+
+
+img{
+    width: 150px;
+    height: 250px;
+}

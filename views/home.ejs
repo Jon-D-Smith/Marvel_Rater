@@ -5,23 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Home Page</title>
 </head>
 
 <body>
     <h1>Home Page</h1>
+    <div class="container">
 
-    <% for(let movie of movies) { %>
-        <div class="movie-card">
-            <h1>
-                <%=movie.title%>
-            </h1>
-            <img src="<%=movie.image%>" alt="">
-            <p>Score: <%= (movie.comedy + movie.immersion +movie.eggs + movie.emotion + movie.development).toFixed(2) %>
-            </p>
-        </div>
-        <% } %>
+
+        <% for(let movie of movies) { %>
+            <div class="movie-card">
+                <div class="Picture"><img src="<%=movie.image%>" alt=""></div>
+                <div class="title">
+                    <h1>
+                        <%=movie.title%>
+                    </h1>
+                </div>
+                <div class="score">
+                    <h4>Score: <%= (movie.comedy + movie.immersion +movie.eggs + movie.emotion +
+                            movie.development).toFixed(2) %>
+                    </h4>
+                </div>
+
+
+
+            </div>
+            <% } %>
+    </div>
+
 </body>
 
 </html>
