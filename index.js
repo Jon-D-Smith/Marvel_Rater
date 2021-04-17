@@ -37,7 +37,24 @@ app.post('/movies', async (req, res) => {
 })
 
 //Edit Movie Rating
+app.get('/movies/:id/edit', async (req, res) => {
+    const { id } = req.params;
+    const movie = await Movie.findById(id);
+    res.render('edit', { movie })
+})
 
+app.put('/movies/:id', async (req, res) => {
+    const { id } = req.params;
+    const movie = await Movie.findByIdAndUpdate(id, req.body)
+    res.redirect('/movies')
+})
+
+//Delete Route
+app.delete('/movies/:id', async (req, res) => {
+    const { id } = req.params;
+    const movie = await Movie.findByIdAndDelete(id)
+    res.redirect('/movies')
+})
 
 
 app.listen(PORT, () => {

@@ -34,3 +34,29 @@ img{
     width: 150px;
     height: 275px;
 }
+
+.hidden{
+    display: none;
+}
+
+.delete-form{
+    
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  width: 510px; /* Full width */
+  height: 300px; /* Full height */
+  background-color: #333;
+  color:white;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.delete-form p{
+    background-color: rgb(239, 239, 239);
+    width: 150px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius:  5px;
+    color: black
+
+}
