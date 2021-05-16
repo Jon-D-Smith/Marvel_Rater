@@ -1,53 +1,52 @@
 .container {
-    width: 100%;
-    height: 1vh;
+  width: 100%;
+  height: 1vh;
 }
 .container h1 {
-    text-align: center;
+  text-align: center;
 }
 
 form {
-    width: 50%;
-    height: 50%;
-    margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
 }
 
-form label{
-    display: inline-block;
-    width: 300px;
-    
-    
+form label {
+  display: inline-block;
+  width: 300px;
 }
 
 form input {
-    width: 100%;
-    height: 35px;
-    margin: 10px 0;
-    display: inline-block;
+  width: 100%;
+  height: 35px;
+  margin: 10px 0;
+  display: inline-block;
 }
 
 form button {
-    height: 40px;
-    width: 300px;
-    background-color: rgb(2, 117, 216);
-    color: white;
-    border-radius: 5px;
+  height: 40px;
+  width: 300px;
+  background-color: rgb(2, 117, 216);
+  color: white;
+  border-radius: 5px;
 }
 
-form span {
-    display: inline-block;
-    text-align: center;
-    height: 40px;
-    width: 300px;
-    background-color: rgb(217, 83, 79);
-    color: white;
-    border-radius: 5px;
-    float: right;
-    
+#cancelBtn {
+  display: inline-block;
+  text-align: center;
+  height: 40px;
+  width: 300px;
+  background-color: rgb(217, 83, 79);
+  color: white;
+  border-radius: 5px;
+  float: right;
+  display: flex;
 }
 
 form a {
-    text-decoration: none;
-    color: inherit;
-    
+  text-decoration: none;
+  color: inherit;
+  align-items: center;
+  justify-content: center;
 }
