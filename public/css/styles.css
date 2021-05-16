@@ -1,56 +1,66 @@
-.container{
-    width: 90%;
-        
+.container {
+  width: 90%;
 }
 .nav {
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    padding-left: 150px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding-left: 150px;
 }
 .fa-plus-square {
-    padding-top: 25px;
-    font-size: 2em;
+  padding-top: 25px;
+  font-size: 2em;
 }
 
 .movie-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-        "Picture title title title"
-        "Picture title title title"
-        "Picture score score score";
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Picture title title title"
+    "Picture title title title"
+    "Picture score score score";
 
-        width: 50%;
-        height: 300px;
-        margin: 50px auto;
-        padding: 10px;
-        border: 1px solid black;
-        border-radius: 20px;
+  width: 50%;
+  height: 300px;
+  margin: 50px auto;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 20px;
 }
-.Picture { grid-area: Picture; }
-.title { grid-area: title; }
-.score { grid-area: score; 
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: 1fr 1fr 1fr;
+.Picture {
+  grid-area: Picture;
 }
-
-
-
-img{
-    width: 150px;
-    height: 275px;
+.title {
+  grid-area: title;
+}
+.score {
+  grid-area: score;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
-.title{
-    text-align: center;
+img {
+  width: 150px;
+  height: 275px;
+}
+
+.title {
+  text-align: center;
 }
 
 .total {
-    font-weight: bolder;
-    border: 1px solid black;
-    width: 150px;
+  font-weight: bolder;
+  border: 1px solid black;
+  width: 150px;
+}
+
+.fancy {
+  font-family: "Avengeance Heroic Avenger", sans-serif;
+}
+
+.big {
+  font-size: 24px;
 }

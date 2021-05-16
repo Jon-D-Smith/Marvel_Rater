@@ -50,3 +50,7 @@ form a {
   align-items: center;
   justify-content: center;
 }
+
+.fancy {
+  font-family: "Avengeance Heroic Avenger", sans-serif;
+}

@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="http://fonts.cdnfonts.com/css/avengeance-heroic-avenger" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <title>Home Page</title>
 </head>
 
 <body>
     <div class="nav">
-        <h1>Movie Ratings</h1>
-        <a href="movies/new"><i class="fas fa-plus-square"> New Rating</i></a>
+        <h1 class="fancy">Movie Ratings</h1>
+        <a href="movies/new" class="fancy big"><i class="fas fa-plus-square"></i>New Rating</a>
     </div>
 
     <div class="container">
@@ -22,7 +23,7 @@
         <% for(let movie of movies) { %>
             <div class="movie-card">
                 <div class="Picture"><img src="<%=movie.image%>" alt=""></div>
-                <div class="title">
+                <div class="title fancy">
 
                     <div class="icons" style="float:right; display: inline;">
                         <a href="/movies/<%=movie._id%>/edit"><button><i class="fas fa-edit"></i></button></a>
