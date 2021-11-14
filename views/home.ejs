@@ -1,68 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="http://fonts.cdnfonts.com/css/avengeance-heroic-avenger" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="http://fonts.cdnfonts.com/css/avengeance-heroic-avenger"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Home Page</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="nav">
-        <h1 class="fancy">Movie Ratings</h1>
-        <a href="movies/new" class="fancy big"><i class="fas fa-plus-square"></i>New Rating</a>
+      <h1 class="fancy">Movie Ratings</h1>
+      <div id="rated" class="fancy">movies rated: <%=movies.length%></div>
+      <a href="movies/new" class="fancy big"
+        ><i class="fas fa-plus-square"></i>New Rating</a
+      >
     </div>
 
     <div class="container">
+      <% for(let movie of movies) { %>
+      <div class="movie-card">
+        <div class="Picture"><img src="<%=movie.image%>" alt="" /></div>
+        <div class="title fancy">
+          <div class="icons" style="float: right; display: inline">
+            <a href="/movies/<%=movie._id%>/edit"
+              ><button><i class="fas fa-edit"></i></button
+            ></a>
+            <form
+              action="/movies/<%=movie._id%>?_method=DELETE"
+              id="deleteForm"
+              method="POST"
+            >
+              <button><i class="fas fa-trash"></i></button>
+            </form>
+          </div>
+          <h1><%=movie.title%></h1>
+        </div>
+        <div class="score">
+          <h4>Comedy: <%=movie.comedy%></h4>
+          <h4>Immersion: <%=movie.immersion%></h4>
+          <h4>Easter Eggs: <%=movie.eggs%></h4>
+          <h4>Emotion: <%=movie.emotion%></h4>
+          <h4>Character Development: <%=movie.development%></h4>
 
+          <h4 class="total">
+            Total Rating: <%= (movie.comedy + movie.immersion +movie.eggs +
+            movie.emotion + movie.development).toFixed(2) %>
+          </h4>
+        </div>
+      </div>
 
-        <% for(let movie of movies) { %>
-            <div class="movie-card">
-                <div class="Picture"><img src="<%=movie.image%>" alt=""></div>
-                <div class="title fancy">
-
-                    <div class="icons" style="float:right; display: inline;">
-                        <a href="/movies/<%=movie._id%>/edit"><button><i class="fas fa-edit"></i></button></a>
-                        <form action="/movies/<%=movie._id%>?_method=DELETE" id="deleteForm" method="POST">
-                            <button><i class="fas fa-trash"></i></button>
-                        </form>
-
-                    </div>
-                    <h1>
-                        <%=movie.title%>
-                    </h1>
-
-
-                </div>
-                <div class="score">
-                    <h4>Comedy: <%=movie.comedy%>
-                    </h4>
-                    <h4>Immersion: <%=movie.immersion%>
-                    </h4>
-                    <h4>Easter Eggs: <%=movie.eggs%>
-                    </h4>
-                    <h4>Emotion: <%=movie.emotion%>
-                    </h4>
-                    <h4>Character Development: <%=movie.development%>
-                    </h4>
-
-                    <h4 class="total">Total Rating: <%= (movie.comedy + movie.immersion +movie.eggs + movie.emotion +
-                            movie.development).toFixed(2) %>
-                    </h4>
-                </div>
-
-
-
-            </div>
-
-            <% } %>
+      <% } %>
     </div>
-
-
-</body>
-
+  </body>
 </html>
